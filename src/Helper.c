@@ -16,8 +16,10 @@
 
 // Node struct
 typedef struct node {
-        // data 
-        int data;
+        
+        // 3x3 puzzle grid 
+        int puzzle[3][3];
+        
         // prority status
         int priority;
         
@@ -28,7 +30,7 @@ typedef struct node {
 Node* newNode(int d, int p) {
 
         Node* temp = (Node*)malloc(sizeof(Node));
-        temp->data = d;
+        temp->puzzle = d;
         temp->priority = p;
         temp->next = NULL;
 
@@ -38,7 +40,7 @@ Node* newNode(int d, int p) {
 // Returns the value of the head
 int peek(Node** head) {
         
-        return (head)->data;
+        return (head)->puzzle;
 }
 
 // Pops the head of the node
