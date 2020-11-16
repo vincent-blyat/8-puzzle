@@ -11,16 +11,18 @@
  *  ++++++++++++++++++++++++++++++++++++++++++++++++
  *  TODO:
  *  - Configure the queue for the states.
- *
+ *  - Fix the state
+ *  - Fix the queue
+ *  - Implement the list
  */
 
 // Struct for the states
-typedef struc state {
+typedef struct state {
 
         // 3x3 puzzle grid
         int puzzleState[3][3];
 
-}
+} State;
 
 // Node struct for PRIORITY QUEUE
 typedef struct queueNode {

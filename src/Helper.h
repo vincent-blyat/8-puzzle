@@ -9,6 +9,7 @@
 #ifndef HELPER_H
 
 #include<stdio.h>
+extern struct state;
 
 extern struct queueNode;
 
