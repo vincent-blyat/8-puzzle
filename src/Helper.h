@@ -6,7 +6,7 @@
 
 #include<stdio.h>
 
-extern struct node;
+extern struct queueNode;
 
 #endif
 
