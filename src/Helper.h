@@ -20,10 +20,10 @@ extern struct queueNode;
 
 extern QueueNode* newQueueNode(int d,int p);
 
-extern int peek(QueueNode** head);
+extern int qPeek(QueueNode** head);
 
-extern void pop(QueueNode** head);
+extern void qPop(QueueNode** head);
 
-extern void push(QueueNode** head, int d, int p);
+extern void qPush(QueueNode** head, int d, int p);
 
-extern int isEmpty(QueueNode** head);
+extern int isQueueEmpty(QueueNode** head);

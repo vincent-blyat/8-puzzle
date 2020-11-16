@@ -46,13 +46,13 @@ QueueNode* newQueueNode(int d, int p) {
 }
 
 // Returns the value of the head
-int peek(QueueNode** head) {
+int qPeek(QueueNode** head) {
         
         return (head)->puzzle;
 }
 
 // Pops the head of the node
-void pop(QueueNode** head) {
+void qPop(QueueNode** head) {
         
         QueueNode* temp = *head;
         (*head) = (*head)->next;
@@ -60,11 +60,11 @@ void pop(QueueNode** head) {
 }
 
 // Push a node into the priority queue
-void push(QueueNode** head, int d, int p) {
+void qPush(QueueNode** head, int d, int p) {
         
         QueueNode* start = (*head);
 
-        QueueNode* temp = newNode(d,p);
+        QueueNode* temp = newQueueNode(d,p);
         
         if((*head)->priority > p) {
                 temp->next = *head;
@@ -81,6 +81,6 @@ void push(QueueNode** head, int d, int p) {
 }
 
 // Check if the queue is empty
-int isEmpty(QueueNode** head) {
+int isQueueEmpty(QueueNode** head) {
         return (*head == NULL)
 }
