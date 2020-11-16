@@ -1,5 +1,9 @@
 /**
+ * ++++++++++++++++++++++++++++++++++++++++++++++++++
+ *  Helper.h
+ *  Al Vincent Musa BSCS3B Artificial Intelligence
  *  Header file for Helper.c
+ *  +++++++++++++++++++++++++++++++++++++++++++++++++
  */
 
 #ifndef HELPER_H
@@ -14,12 +18,12 @@ extern struct queueNode;
 // Function Prototypes //
 /////////////////////////
 
-extern Node* newNode(int d,int p);
+extern QueueNode* newQueueNode(int d,int p);
 
-extern int peek(Node** head);
+extern int peek(QueueNode** head);
 
-extern void pop(Node** head);
+extern void pop(QueueNode** head);
 
-extern void push(Node** head, int d, int p);
+extern void push(QueueNode** head, int d, int p);
 
-extern int isEmpty(Node** head);
+extern int isEmpty(QueueNode** head);

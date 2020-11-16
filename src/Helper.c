@@ -1,6 +1,6 @@
 /**
  * +++++++++++++++++++++++++++++++++++++++++++++++++
- *  Queue.h
+ *  Helper.c 
  *  Al Vincent Musa BSCS3B Artificial Intelligence
  *
  *  Utility and data structures for the program.
@@ -14,22 +14,30 @@
  *
  */
 
-// Node struct
-typedef struct node {
-        
-        // 3x3 puzzle grid 
-        int puzzle[3][3];
+// Struct for the states
+typedef struc state {
+
+        // 3x3 puzzle grid
+        int puzzleState[3][3];
+
+}
+
+// Node struct for PRIORITY QUEUE
+typedef struct queueNode {
+ 
+        // data
+
         
         // prority status
         int priority;
         
         struct node* next
-} Node;
+} QueueNode;
 
 // create a new Node
-Node* newNode(int d, int p) {
+QueueNode* newQueueNode(int d, int p) {
 
-        Node* temp = (Node*)malloc(sizeof(Node));
+        QueueNode* temp = (QueueNode*)malloc(sizeof(QueueNode));
         temp->puzzle = d;
         temp->priority = p;
         temp->next = NULL;
@@ -38,24 +46,25 @@ Node* newNode(int d, int p) {
 }
 
 // Returns the value of the head
-int peek(Node** head) {
+int peek(QueueNode** head) {
         
         return (head)->puzzle;
 }
 
 // Pops the head of the node
-void pop(Node** head) {
+void pop(QueueNode** head) {
         
-        Node* temp = *head;
+        QueueNode* temp = *head;
         (*head) = (*head)->next;
         free(temp);
 }
 
 // Push a node into the priority queue
-void push(Node** head, int d, int p) {
-        Node* start = (*head);
+void push(QueueNode** head, int d, int p) {
+        
+        QueueNode* start = (*head);
 
-        Node* temp = newNode(d,p);
+        QueueNode* temp = newNode(d,p);
         
         if((*head)->priority > p) {
                 temp->next = *head;
@@ -72,6 +81,6 @@ void push(Node** head, int d, int p) {
 }
 
 // Check if the queue is empty
-int isEmpty(Node** head) {
+int isEmpty(QueueNode** head) {
         return (*head == NULL)
 }
