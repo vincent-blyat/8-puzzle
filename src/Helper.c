@@ -14,15 +14,27 @@
  *  - Fix the state
  *  - Fix the queue
  *  - Implement the list
+ *  - Implement the tree
+ *  ++++++++++++++++++++++++++++++++++++++++++++++++
  */
 
-// Struct for the states
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "Helper.h"
+
+/** Struct for the states
 typedef struct state {
 
         // 3x3 puzzle grid
         int puzzleState[3][3];
 
 } State;
+*/
+///////////
+// QUEUE //
+///////////
 
 // Node struct for PRIORITY QUEUE
 typedef struct queueNode {
@@ -35,6 +47,7 @@ typedef struct queueNode {
         
         struct node* next
 } QueueNode;
+
 
 // create a new Node
 QueueNode* newQueueNode(int d, int p) {
@@ -86,3 +99,13 @@ void qPush(QueueNode** head, int d, int p) {
 int isQueueEmpty(QueueNode** head) {
         return (*head == NULL)
 }
+
+//////////
+// LIST //
+//////////
+
+// Node struct for the list
+typedef struct listNode {
+        
+        struct listNode* next;
+} ListNode;

@@ -8,10 +8,15 @@
 
 #ifndef HELPER_H
 
-#include<stdio.h>
-extern struct state;
+#include <stdio.h>
 
-extern struct queueNode;
+
+typedef struct state{
+        
+        int puzzleState[3][3];
+} State;
+
+extern struct queueNode QueueNode;
 
 #endif
 
@@ -19,6 +24,8 @@ extern struct queueNode;
 // Function Prototypes //
 /////////////////////////
 
+/**
+ *
 extern QueueNode* newQueueNode(int d,int p);
 
 extern int qPeek(QueueNode** head);
@@ -28,3 +35,4 @@ extern void qPop(QueueNode** head);
 extern void qPush(QueueNode** head, int d, int p);
 
 extern int isQueueEmpty(QueueNode** head);
+**/
