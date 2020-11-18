@@ -1,7 +1,16 @@
+/**
+ * ++++++++++++++++++++++++++++++++++++
+ *      File: DespicableCat.cpp
+ *      Author: Al Vincent Musa
+ * ++++++++++++++++++++++++++++++++++++
+ * */
+
 #include "DespicableCat.h"
 
 #include <iostream.h>
 
-void sayHello() {
-        
+using namespace std;
+
+void State::State(int* puzzleState) {
+
 }

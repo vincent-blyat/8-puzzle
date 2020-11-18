@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "../src/Helper.h"
 
 int main() {
     
-    struct State s = {.puzzleState[1][1] = 6};
+    int arr[3][3] = {{1, 2, 3},
+                    {4, 5, 6},
+                    {7, 8, 9}};
 
-    printf("%d", s.puzzleState[1][1]);
+    TreeNode* tree = newTreeNode(arr);
 
     return 0;
 }

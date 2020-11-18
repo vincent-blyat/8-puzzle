@@ -11,10 +11,20 @@
 #include <stdio.h>
 
 
-typedef struct state{
-        
+struct State {
+
         int puzzleState[3][3];
-} State;
+
+        int cost;
+};
+
+typedef struct treeNode {
+        
+        struct State* state;
+        
+        struct treeNode* children[4];
+
+} TreeNode;
 
 extern struct queueNode QueueNode;
 
@@ -24,6 +34,7 @@ extern struct queueNode QueueNode;
 // Function Prototypes //
 /////////////////////////
 
+extern TreeNode* newTreeNode(int puzzleState[][3]);
 /**
  *
 extern QueueNode* newQueueNode(int d,int p);

@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "Helper.h"
 
@@ -32,10 +33,31 @@ typedef struct state {
 
 } State;
 */
+
+//////////
+// TREE //
+//////////
+
+TreeNode* newTreeNode(int newPuzzleState[][3]) {
+
+        // Create a new tree node
+        TreeNode* temp = (TreeNode*)malloc(sizeof(TreeNode));
+
+        // Copy newPuzzleState into puzzleState
+        memcpy(temp->state->puzzleState, newPuzzleState, sizeof(int) * 3 * 3);
+
+        // Set children to NULL
+        temp->children[0] = NULL;
+
+        return temp;
+}
+
 ///////////
 // QUEUE //
 ///////////
 
+/**
+ *
 // Node struct for PRIORITY QUEUE
 typedef struct queueNode {
  
@@ -109,3 +131,4 @@ typedef struct listNode {
         
         struct listNode* next;
 } ListNode;
+*/
