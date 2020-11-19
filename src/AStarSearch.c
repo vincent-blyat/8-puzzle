@@ -1,6 +1,6 @@
 /**
  * +++++++++++++++++++++++++++++++++++++++++++++++++
- *  Helper.c 
+ *  AStarSearch.c 
  *  Al Vincent Musa BSCS3B Artificial Intelligence
  *
  *  Utility and data structures for the program.
@@ -23,7 +23,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "Helper.h"
+#include "AStarSearch.h"
 
 /** Struct for the states
 typedef struct state {
@@ -43,8 +43,10 @@ TreeNode* newTreeNode(int newPuzzleState[][3]) {
         // Create a new tree node
         TreeNode* temp = (TreeNode*)malloc(sizeof(TreeNode));
 
+        temp->s = (State*)malloc(sizeof(State));
+
         // Copy newPuzzleState into puzzleState
-        memcpy(temp->state->puzzleState, newPuzzleState, sizeof(int) * 3 * 3);
+        memcpy(temp->s->puzzleState, newPuzzleState, sizeof(int) * 3 * 3);
 
         // Set children to NULL
         temp->children[0] = NULL;

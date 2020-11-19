@@ -1,6 +1,6 @@
 /**
  * ++++++++++++++++++++++++++++++++++++++++++++++++++
- *  Helper.h
+ *  AStarSearch.h
  *  Al Vincent Musa BSCS3B Artificial Intelligence
  *  Header file for Helper.c
  *  +++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9,18 +9,18 @@
 #ifndef HELPER_H
 
 #include <stdio.h>
+#include <stdlib.h>
 
-
-struct State {
+typedef struct state {
 
         int puzzleState[3][3];
 
         int cost;
-};
+} State;
 
 typedef struct treeNode {
         
-        struct State* state;
+        State* s;
         
         struct treeNode* children[4];
 

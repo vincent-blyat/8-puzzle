@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "../src/Helper.h"
+#include "../src/AStarSearch.h"
 
 int main() {
     
@@ -10,7 +10,13 @@ int main() {
                     {4, 5, 6},
                     {7, 8, 9}};
 
-    TreeNode* tree = newTreeNode(arr);
+    TreeNode* t = newTreeNode(arr);
 
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            printf("%d ", t->s->puzzleState[i][j]);
+        }
+        printf("\n");
+    }
     return 0;
 }
