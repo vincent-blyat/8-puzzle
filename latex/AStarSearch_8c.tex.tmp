@@ -1,0 +1,55 @@
+\hypertarget{AStarSearch_8c}{}\doxysection{src/\+A\+Star\+Search.c File Reference}
+\label{AStarSearch_8c}\index{src/AStarSearch.c@{src/AStarSearch.c}}
+
+
+C source file for \mbox{\hyperlink{AStarSearch_8h_source}{A\+Star\+Search.\+h}}.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}A\+Star\+Search.\+h\char`\"{}}\newline
+Include dependency graph for A\+Star\+Search.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structtreeNode}{Tree\+Node}} $\ast$ \mbox{\hyperlink{AStarSearch_8c_a359a64216b71af10ce9e5da510d3d634}{new\+Tree\+Node}} (int new\+Puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\item 
+\mbox{\Hypertarget{AStarSearch_8c_a296e056dddcfa7e2162f83f95d197607}\label{AStarSearch_8c_a296e056dddcfa7e2162f83f95d197607}} 
+void {\bfseries move\+UP} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\item 
+\mbox{\Hypertarget{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}\label{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}} 
+void {\bfseries move\+D\+O\+WN} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\item 
+\mbox{\Hypertarget{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}\label{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}} 
+void {\bfseries move\+R\+I\+G\+HT} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\item 
+\mbox{\Hypertarget{AStarSearch_8c_a5d9a1dfc6d20d2635f881c7f5f049353}\label{AStarSearch_8c_a5d9a1dfc6d20d2635f881c7f5f049353}} 
+void {\bfseries move\+L\+E\+FT} (\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C source file for \mbox{\hyperlink{AStarSearch_8h_source}{A\+Star\+Search.\+h}}. 
+
+\begin{DoxyAuthor}{Author}
+\{Al Vincent Musa, Vincent\} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{AStarSearch_8c_a359a64216b71af10ce9e5da510d3d634}\label{AStarSearch_8c_a359a64216b71af10ce9e5da510d3d634}} 
+\index{AStarSearch.c@{AStarSearch.c}!newTreeNode@{newTreeNode}}
+\index{newTreeNode@{newTreeNode}!AStarSearch.c@{AStarSearch.c}}
+\doxysubsubsection{\texorpdfstring{newTreeNode()}{newTreeNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtreeNode}{Tree\+Node}}$\ast$ new\+Tree\+Node (\begin{DoxyParamCaption}\item[{int}]{new\+Puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+++++++++++++++++++++++++++++++++++++++++++++++++ T\+O\+DO\+:
+\begin{DoxyItemize}
+\item Configure the queue for the states.
+\item Fix the state
+\item Fix the queue
+\item Implement the list
+\item Implement the tree ++++++++++++++++++++++++++++++++++++++++++++++++ 
+\end{DoxyItemize}

@@ -1,16 +1,28 @@
-/**
- * ++++++++++++++++++++++++++++++++++++++++++++++++++
- *  AStarSearch.h
- *  Al Vincent Musa BSCS3B Artificial Intelligence
- *  Header file for Helper.c
- *  +++++++++++++++++++++++++++++++++++++++++++++++++
- */
+/*******************************
+ *  @headerfile  AStarSearch.h "AStarSearch.h"
+ *  @brief A header file for AStarSearch.c
+ *  @author {Al Vincent Musa, Vincent Lomibao}
+ *******************************/
+
 
 #ifndef HELPER_H
 
 #include <stdio.h>
 #include <stdlib.h>
 
+/*!
+ *  @typedef State
+ *  Alias for state
+ *
+ *  @struct state
+ *  struct definition for State
+ *
+ *  @var puzzleState
+ *  2D array representing a 3x3 puzzle
+ *
+ *  @var cost
+ *  The cost of the state
+ */
 typedef struct state {
 
         int puzzleState[3][3];
@@ -18,6 +30,19 @@ typedef struct state {
         int cost;
 } State;
 
+/*!
+ *  @typedef TreeNode
+ *  Alias for treeNode
+ *
+ *  @struct treeNode
+ *  struct definition for treeNode
+ *  
+ *  @var s
+ *  The state of the puzzle
+ *
+ *  @var children
+ *  Array containing the pointers to node's children
+ */
 typedef struct treeNode {
         
         State* s;
