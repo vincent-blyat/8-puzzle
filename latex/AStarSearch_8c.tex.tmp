@@ -14,43 +14,102 @@ Include dependency graph for A\+Star\+Search.\+c\+:
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{AStarSearch_8c_a359a64216b71af10ce9e5da510d3d634}\label{AStarSearch_8c_a359a64216b71af10ce9e5da510d3d634}} 
-\mbox{\hyperlink{structtreeNode}{Tree\+Node}} $\ast$ {\bfseries new\+Tree\+Node} (int new\+Puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
-\item 
-\mbox{\Hypertarget{AStarSearch_8c_a296e056dddcfa7e2162f83f95d197607}\label{AStarSearch_8c_a296e056dddcfa7e2162f83f95d197607}} 
-void {\bfseries move\+UP} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
-\item 
-\mbox{\Hypertarget{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}\label{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}} 
-void {\bfseries move\+D\+O\+WN} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
-\item 
-\mbox{\Hypertarget{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}\label{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}} 
-void {\bfseries move\+R\+I\+G\+HT} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
-\item 
-void \mbox{\hyperlink{AStarSearch_8c_a4506e3b6e4cb306b6a87803ae0cf98da}{move\+L\+E\+FT}} (\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{structtreeNode}{Tree\+Node}} $\ast$ \mbox{\hyperlink{AStarSearch_8c_a26c8316eb7e7efbef3c0fcfee8d09a8f}{new\+Tree\+Node}} (int new\+Puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Create a new node for the tree. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AStarSearch_8c_a296e056dddcfa7e2162f83f95d197607}{move\+UP}} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Moves a tile upwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}{move\+D\+O\+WN}} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Moves a tile downwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}{move\+R\+I\+G\+HT}} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Moves a tile rightwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AStarSearch_8c_a7424860b961707a96e10028a5795faac}{move\+L\+E\+FT}} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
+\begin{DoxyCompactList}\small\item\em Moves a tile leftwards. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 C source file for \mbox{\hyperlink{AStarSearch_8h_source}{A\+Star\+Search.\+h}}. 
 
-+++++++++++++++++++++++++++++++++++++++++++++++++
-
 \begin{DoxyAuthor}{Author}
-Al Vincent Musa ++++++++++++++++++++++++++++++++++++++++++++++++ 
+Al Vincent Musa 
 \end{DoxyAuthor}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{AStarSearch_8c_a4506e3b6e4cb306b6a87803ae0cf98da}\label{AStarSearch_8c_a4506e3b6e4cb306b6a87803ae0cf98da}} 
-\index{AStarSearch.c@{AStarSearch.c}!moveLEFT@{moveLEFT}}
-\index{moveLEFT@{moveLEFT}!AStarSearch.c@{AStarSearch.c}}
-\doxysubsubsection{\texorpdfstring{moveLEFT()}{moveLEFT()}}
-{\footnotesize\ttfamily move\+L\+E\+FT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}\label{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}} 
+\index{AStarSearch.c@{AStarSearch.c}!moveDOWN@{moveDOWN}}
+\index{moveDOWN@{moveDOWN}!AStarSearch.c@{AStarSearch.c}}
+\doxysubsubsection{\texorpdfstring{moveDOWN()}{moveDOWN()}}
+{\footnotesize\ttfamily void move\+D\+O\+WN (\begin{DoxyParamCaption}\item[{int}]{puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
 
-moves the tile L\+E\+FT
+
+
+Moves a tile downwards. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em puzzle\+State} & \mbox{[}int\mbox{[} takes a 2D Array as a parameter. \\
+{\em puzzle\+State} & 2D array to be manipulated. \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{AStarSearch_8c_a7424860b961707a96e10028a5795faac}\label{AStarSearch_8c_a7424860b961707a96e10028a5795faac}} 
+\index{AStarSearch.c@{AStarSearch.c}!moveLEFT@{moveLEFT}}
+\index{moveLEFT@{moveLEFT}!AStarSearch.c@{AStarSearch.c}}
+\doxysubsubsection{\texorpdfstring{moveLEFT()}{moveLEFT()}}
+{\footnotesize\ttfamily void move\+L\+E\+FT (\begin{DoxyParamCaption}\item[{int}]{puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Moves a tile leftwards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puzzle\+State} & 2D array to be manipulated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}\label{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}} 
+\index{AStarSearch.c@{AStarSearch.c}!moveRIGHT@{moveRIGHT}}
+\index{moveRIGHT@{moveRIGHT}!AStarSearch.c@{AStarSearch.c}}
+\doxysubsubsection{\texorpdfstring{moveRIGHT()}{moveRIGHT()}}
+{\footnotesize\ttfamily void move\+R\+I\+G\+HT (\begin{DoxyParamCaption}\item[{int}]{puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Moves a tile rightwards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puzzle\+State} & 2D array to be manipulated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{AStarSearch_8c_a296e056dddcfa7e2162f83f95d197607}\label{AStarSearch_8c_a296e056dddcfa7e2162f83f95d197607}} 
+\index{AStarSearch.c@{AStarSearch.c}!moveUP@{moveUP}}
+\index{moveUP@{moveUP}!AStarSearch.c@{AStarSearch.c}}
+\doxysubsubsection{\texorpdfstring{moveUP()}{moveUP()}}
+{\footnotesize\ttfamily void move\+UP (\begin{DoxyParamCaption}\item[{int}]{puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Moves a tile upwards. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puzzle\+State} & 2D array to be manipulated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{AStarSearch_8c_a26c8316eb7e7efbef3c0fcfee8d09a8f}\label{AStarSearch_8c_a26c8316eb7e7efbef3c0fcfee8d09a8f}} 
+\index{AStarSearch.c@{AStarSearch.c}!newTreeNode@{newTreeNode}}
+\index{newTreeNode@{newTreeNode}!AStarSearch.c@{AStarSearch.c}}
+\doxysubsubsection{\texorpdfstring{newTreeNode()}{newTreeNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtreeNode}{Tree\+Node}} $\ast$ new\+Tree\+Node (\begin{DoxyParamCaption}\item[{int}]{puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Create a new node for the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em puzzle\+State} & 2D for the new node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A new node. 
+\end{DoxyReturn}

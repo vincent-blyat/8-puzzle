@@ -1,22 +1,16 @@
 /*!
- * +++++++++++++++++++++++++++++++++++++++++++++++++
  *  @file AStarSearch.c
  *  @brief C source file for AStarSearch.h
  *
  *  @author Al Vincent Musa
- *  ++++++++++++++++++++++++++++++++++++++++++++++++
  */
 
 /*!
- *  @todo
- *  - Implement the operations
- *      + moveUP
- *      + moveDOWN
- *      + moveRIGHT
- *      + moveLEFT
- *  - Implement the priority queue
- *  - Implement the list
- *  - Implement the tree
+ *  @page TODO_LIST TODO list
+ *  @todo Implement the operations
+ *  @todo Implement the priority queue
+ *  @todo Implement the list
+ *  @todo Implement the tree
  */
 
 
@@ -35,11 +29,10 @@
  *  @fn newTreeNode
  *  Create a new node for the tree.
  *
- *  @param newPuzzleState
- *  [int] takes a 2D array as a parameter.
+ *  @param newPuzzleState [in] takes a 2D array as a parameter.
  * 
  *  @return
- *  return a new node
+ *  returns a new node
  */
 TreeNode* newTreeNode(int newPuzzleState[][3]) {
 
@@ -61,51 +54,22 @@ TreeNode* newTreeNode(int newPuzzleState[][3]) {
 // OPERATIONS //
 ////////////////
 
-/*!
- *  @fn moveUP
- *  moves the tile UP
- *
- *  @param puzzleState
- *  [int[ takes a 2D Array as a parameter.
- */
 void moveUP(int puzzleState[][3]) {
 
     
 }
 
-/*!
- *  @fn moveDOWN
- *  moves the tile DOWN
- *
- *  @param puzzleState
- *  [int[ takes a 2D Array as a parameter.
- */
 void moveDOWN(int puzzleState[][3]) {
 
 
 }
 
-/*!
- *  @fn moveRIGHT
- *  moves the tile RIGHT 
- *
- *  @param puzzleState
- *  [int[ takes a 2D Array as a parameter.
- */
 void moveRIGHT(int puzzleState[][3]) {
 
 
 }
 
-/*!
- *  @fn moveLEFT
- *  moves the tile LEFT 
- *
- *  @param puzzleState
- *  [int[ takes a 2D Array as a parameter.
- */
-void moveLEFT([][3]) {
-
+void moveLEFT(int puzzleState[][3]) {
 
 }
 

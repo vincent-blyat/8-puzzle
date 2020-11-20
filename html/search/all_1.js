@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['moveleft_1',['moveLEFT',['../AStarSearch_8c.html#a4506e3b6e4cb306b6a87803ae0cf98da',1,'AStarSearch.c']]]
+  ['children_1',['children',['../structtreeNode.html#af5b49b3bec7b9b3d3088942a8c3f4baf',1,'treeNode']]],
+  ['cost_2',['cost',['../structstate.html#a128fb13f05c6261f0bed29df8f014ced',1,'state']]]
 ];

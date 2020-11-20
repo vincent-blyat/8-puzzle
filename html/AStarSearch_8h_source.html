@@ -82,41 +82,49 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structstate.html">   26</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structstate.html">state</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">int</span> puzzleState[3][3];</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">int</span> cost;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;} <a class="code" href="structstate.html">State</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="structtreeNode.html">   46</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structtreeNode.html">treeNode</a> {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="structstate.html">State</a>* s;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">struct </span><a class="code" href="structtreeNode.html">treeNode</a>* children[4];</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <a class="code" href="structtreeNode.html">TreeNode</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span>queueNode QueueNode;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structstate.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structstate.html">state</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="structstate.html#a6be0d846e062fa7e875156da51d8a75d">   22</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structstate.html#a6be0d846e062fa7e875156da51d8a75d">puzzleState</a>[3][3]; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structstate.html#a128fb13f05c6261f0bed29df8f014ced">   24</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structstate.html#a128fb13f05c6261f0bed29df8f014ced">cost</a>; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;} <a class="code" href="structstate.html">State</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structtreeNode.html">   34</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structtreeNode.html">treeNode</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structtreeNode.html#ae8334adc61536e619c9580ca59f0b3d6">   36</a></span>&#160;        <a class="code" href="structstate.html">State</a>* <a class="code" href="structtreeNode.html#ae8334adc61536e619c9580ca59f0b3d6">s</a>; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structtreeNode.html#af5b49b3bec7b9b3d3088942a8c3f4baf">   38</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structtreeNode.html">treeNode</a>* <a class="code" href="structtreeNode.html#af5b49b3bec7b9b3d3088942a8c3f4baf">children</a>[4]; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;} <a class="code" href="structtreeNode.html">TreeNode</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span>queueNode QueueNode;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// Function Prototypes //</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">extern</span> <a class="code" href="structtreeNode.html">TreeNode</a>* <a class="code" href="AStarSearch_8c.html#a26c8316eb7e7efbef3c0fcfee8d09a8f">newTreeNode</a>(<span class="keywordtype">int</span> newpuzzleState[][3]);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// Function Prototypes //</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">extern</span> <a class="code" href="structtreeNode.html">TreeNode</a>* newTreeNode(<span class="keywordtype">int</span> puzzleState[][3]);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> moveUP(<span class="keywordtype">int</span> puzzleState[][3]);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> moveDOWN(<span class="keywordtype">int</span> puzzleState[][3]);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> moveRIGHT(<span class="keywordtype">int</span> puzzleState[][3]);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="AStarSearch_8c.html#a4506e3b6e4cb306b6a87803ae0cf98da">moveLEFT</a>(<span class="keywordtype">int</span> puzzleState[][3]);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="AStarSearch_8c.html#a296e056dddcfa7e2162f83f95d197607">moveUP</a>(<span class="keywordtype">int</span> puzzleState[][3]);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="AStarSearch_8c.html#a9aa27516f11f049eb58a8739569cc620">moveDOWN</a>(<span class="keywordtype">int</span> puzzleState[][3]);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="AStarSearch_8c.html#a4e8668afe166ca2163608eb038c95f63">moveRIGHT</a>(<span class="keywordtype">int</span> puzzleState[][3]);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="AStarSearch_8c.html#a7424860b961707a96e10028a5795faac">moveLEFT</a>(<span class="keywordtype">int</span> puzzleState[][3]);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aAStarSearch_8c_html_a4506e3b6e4cb306b6a87803ae0cf98da"><div class="ttname"><a href="AStarSearch_8c.html#a4506e3b6e4cb306b6a87803ae0cf98da">moveLEFT</a></div><div class="ttdeci">void moveLEFT([][3])</div><div class="ttdef"><b>Definition:</b> AStarSearch.c:107</div></div>
-<div class="ttc" id="astructtreeNode_html"><div class="ttname"><a href="structtreeNode.html">treeNode</a></div><div class="ttdef"><b>Definition:</b> AStarSearch.h:46</div></div>
-<div class="ttc" id="astructstate_html"><div class="ttname"><a href="structstate.html">state</a></div><div class="ttdef"><b>Definition:</b> AStarSearch.h:26</div></div>
+<div class="ttc" id="astructtreeNode_html_af5b49b3bec7b9b3d3088942a8c3f4baf"><div class="ttname"><a href="structtreeNode.html#af5b49b3bec7b9b3d3088942a8c3f4baf">treeNode::children</a></div><div class="ttdeci">struct treeNode * children[4]</div><div class="ttdoc">array of children pointers.</div><div class="ttdef"><b>Definition:</b> AStarSearch.h:38</div></div>
+<div class="ttc" id="astructstate_html_a6be0d846e062fa7e875156da51d8a75d"><div class="ttname"><a href="structstate.html#a6be0d846e062fa7e875156da51d8a75d">state::puzzleState</a></div><div class="ttdeci">int puzzleState[3][3]</div><div class="ttdoc">2D array representing a 3x3 puzzle grid.</div><div class="ttdef"><b>Definition:</b> AStarSearch.h:22</div></div>
+<div class="ttc" id="aAStarSearch_8c_html_a9aa27516f11f049eb58a8739569cc620"><div class="ttname"><a href="AStarSearch_8c.html#a9aa27516f11f049eb58a8739569cc620">moveDOWN</a></div><div class="ttdeci">void moveDOWN(int puzzleState[][3])</div><div class="ttdoc">Moves a tile downwards.</div><div class="ttdef"><b>Definition:</b> AStarSearch.c:62</div></div>
+<div class="ttc" id="aAStarSearch_8c_html_a26c8316eb7e7efbef3c0fcfee8d09a8f"><div class="ttname"><a href="AStarSearch_8c.html#a26c8316eb7e7efbef3c0fcfee8d09a8f">newTreeNode</a></div><div class="ttdeci">TreeNode * newTreeNode(int newPuzzleState[][3])</div><div class="ttdoc">Create a new node for the tree.</div><div class="ttdef"><b>Definition:</b> AStarSearch.c:37</div></div>
+<div class="ttc" id="astructtreeNode_html"><div class="ttname"><a href="structtreeNode.html">treeNode</a></div><div class="ttdef"><b>Definition:</b> AStarSearch.h:34</div></div>
+<div class="ttc" id="aAStarSearch_8c_html_a7424860b961707a96e10028a5795faac"><div class="ttname"><a href="AStarSearch_8c.html#a7424860b961707a96e10028a5795faac">moveLEFT</a></div><div class="ttdeci">void moveLEFT(int puzzleState[][3])</div><div class="ttdoc">Moves a tile leftwards.</div><div class="ttdef"><b>Definition:</b> AStarSearch.c:72</div></div>
+<div class="ttc" id="astructstate_html"><div class="ttname"><a href="structstate.html">state</a></div><div class="ttdef"><b>Definition:</b> AStarSearch.h:20</div></div>
+<div class="ttc" id="astructstate_html_a128fb13f05c6261f0bed29df8f014ced"><div class="ttname"><a href="structstate.html#a128fb13f05c6261f0bed29df8f014ced">state::cost</a></div><div class="ttdeci">int cost</div><div class="ttdoc">the cost of state</div><div class="ttdef"><b>Definition:</b> AStarSearch.h:24</div></div>
+<div class="ttc" id="aAStarSearch_8c_html_a4e8668afe166ca2163608eb038c95f63"><div class="ttname"><a href="AStarSearch_8c.html#a4e8668afe166ca2163608eb038c95f63">moveRIGHT</a></div><div class="ttdeci">void moveRIGHT(int puzzleState[][3])</div><div class="ttdoc">Moves a tile rightwards.</div><div class="ttdef"><b>Definition:</b> AStarSearch.c:67</div></div>
+<div class="ttc" id="aAStarSearch_8c_html_a296e056dddcfa7e2162f83f95d197607"><div class="ttname"><a href="AStarSearch_8c.html#a296e056dddcfa7e2162f83f95d197607">moveUP</a></div><div class="ttdeci">void moveUP(int puzzleState[][3])</div><div class="ttdoc">Moves a tile upwards.</div><div class="ttdef"><b>Definition:</b> AStarSearch.c:57</div></div>
+<div class="ttc" id="astructtreeNode_html_ae8334adc61536e619c9580ca59f0b3d6"><div class="ttname"><a href="structtreeNode.html#ae8334adc61536e619c9580ca59f0b3d6">treeNode::s</a></div><div class="ttdeci">State * s</div><div class="ttdoc">the puzzle state</div><div class="ttdef"><b>Definition:</b> AStarSearch.h:36</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

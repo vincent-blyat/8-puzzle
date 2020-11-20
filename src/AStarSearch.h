@@ -16,18 +16,12 @@
  *
  *  @struct state
  *  struct definition for State
- *
- *  @var puzzleState
- *  2D array representing a 3x3 puzzle
- *
- *  @var cost
- *  The cost of the state
  */
 typedef struct state {
 
-        int puzzleState[3][3];
+        int puzzleState[3][3]; ///< 2D array representing a 3x3 puzzle grid.
 
-        int cost;
+        int cost; ///< the cost of state
 } State;
 
 /*!
@@ -36,18 +30,12 @@ typedef struct state {
  *
  *  @struct treeNode
  *  struct definition for treeNode
- *  
- *  @var s
- *  The state of the puzzle
- *
- *  @var children
- *  Array containing the pointers to node's children
  */
 typedef struct treeNode {
         
-        State* s;
+        State* s; ///< the puzzle state
         
-        struct treeNode* children[4];
+        struct treeNode* children[4]; ///< array of children pointers.
 
 } TreeNode;
 
@@ -59,14 +47,40 @@ extern struct queueNode QueueNode;
 // Function Prototypes //
 /////////////////////////
 
-extern TreeNode* newTreeNode(int puzzleState[][3]);
+/**
+ *  @fn TreeNode* newTreeNode(int puzzleState[][3])A
+ *  @brief Create a new node for the tree.
+ *  @param puzzleState 2D for the new node.
+ *  @return A new node.
+ */
+extern TreeNode* newTreeNode(int newpuzzleState[][3]);
 
+/**
+ *  @fn void moveUP(int puzzleState[][3])
+ *  @brief Moves a tile upwards.
+ *  @param puzzleState 2D array to be manipulated.
+ */
 extern void moveUP(int puzzleState[][3]);
 
+/**
+ *  @fn void moveDOWN(int puzzleState[][3])
+ *  @brief Moves a tile downwards.
+ *  @param puzzleState 2D array to be manipulated.
+ */
 extern void moveDOWN(int puzzleState[][3]);
 
+/**
+ *  @fn void moveRIGHT(int puzzleState[][3])
+ *  @brief Moves a tile rightwards.
+ *  @param puzzleState 2D array to be manipulated.
+ */
 extern void moveRIGHT(int puzzleState[][3]);
 
+/**
+ *  @fn void moveLEFT(int puzzleState[][3])
+ *  @brief Moves a tile leftwards.
+ *  @param puzzleState 2D array to be manipulated.
+ */
 extern void moveLEFT(int puzzleState[][3]);
 
 /**
