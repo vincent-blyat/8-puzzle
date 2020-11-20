@@ -25,14 +25,6 @@
 
 #include "AStarSearch.h"
 
-/** Struct for the states
-typedef struct state {
-
-        // 3x3 puzzle grid
-        int puzzleState[3][3];
-
-} State;
-*/
 
 //////////
 // TREE //
@@ -52,6 +44,30 @@ TreeNode* newTreeNode(int newPuzzleState[][3]) {
         temp->children[0] = NULL;
 
         return temp;
+}
+
+////////////////
+// OPERATIONS //
+////////////////
+
+void moveUP(int puzzleState[][3]) {
+
+    
+}
+
+void moveDOWN(int puzzleState[][3]) {
+
+
+}
+
+void moveRIGHT(int puzzleState[][3]) {
+
+
+}
+
+void moveLEFT([][3]) {
+
+
 }
 
 ///////////

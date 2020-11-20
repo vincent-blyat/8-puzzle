@@ -35,6 +35,15 @@ extern struct queueNode QueueNode;
 /////////////////////////
 
 extern TreeNode* newTreeNode(int puzzleState[][3]);
+
+extern void moveUP(int puzzleState[][3]);
+
+extern void moveDOWN(int puzzleState[][3]);
+
+extern void moveRIGHT(int puzzleState[][3]);
+
+extern void moveLEFT(int puzzleState[][3]);
+
 /**
  *
 extern QueueNode* newQueueNode(int d,int p);
