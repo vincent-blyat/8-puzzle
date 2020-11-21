@@ -84,6 +84,13 @@ extern void moveRIGHT(int puzzleState[][3]);
 extern void moveLEFT(int puzzleState[][3]);
 
 /**
+ *  @fn void swap(int* a, int* b)
+ *  @brief Takes two pointers and swap its values
+ *  @param a Pointer to an integer.
+ *  @param b Pointer to an interger.
+ */
+extern void swap(int* a, int* b)
+/**
  *
 extern QueueNode* newQueueNode(int d,int p);
 

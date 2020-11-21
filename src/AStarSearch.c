@@ -73,6 +73,13 @@ void moveLEFT(int puzzleState[][3]) {
 
 }
 
+void swap(int* a, int* b) {
+
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
 ///////////
 // QUEUE //
 ///////////

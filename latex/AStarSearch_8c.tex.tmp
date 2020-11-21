@@ -23,7 +23,9 @@ void \mbox{\hyperlink{AStarSearch_8c_a9aa27516f11f049eb58a8739569cc620}{move\+D\
 void \mbox{\hyperlink{AStarSearch_8c_a4e8668afe166ca2163608eb038c95f63}{move\+R\+I\+G\+HT}} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
 \begin{DoxyCompactList}\small\item\em Moves a tile rightwards. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{AStarSearch_8c_a7424860b961707a96e10028a5795faac}{move\+L\+E\+FT}} (int puzzle\+State\mbox{[}$\,$\mbox{]}\mbox{[}3\mbox{]})
-\begin{DoxyCompactList}\small\item\em Moves a tile leftwards. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Moves a tile leftwards. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AStarSearch_8c_a4b9708d87be7a409eff20e5e7e8b43c8}{swap}} (int $\ast$a, int $\ast$b)
+\begin{DoxyCompactList}\small\item\em Takes two pointers and swap its values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -113,3 +115,20 @@ Create a new node for the tree.
 \begin{DoxyReturn}{Returns}
 A new node. 
 \end{DoxyReturn}
+\mbox{\Hypertarget{AStarSearch_8c_a4b9708d87be7a409eff20e5e7e8b43c8}\label{AStarSearch_8c_a4b9708d87be7a409eff20e5e7e8b43c8}} 
+\index{AStarSearch.c@{AStarSearch.c}!swap@{swap}}
+\index{swap@{swap}!AStarSearch.c@{AStarSearch.c}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int $\ast$}]{a,  }\item[{int $\ast$}]{b }\end{DoxyParamCaption})}
+
+
+
+Takes two pointers and swap its values. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Pointer to an integer. \\
+\hline
+{\em b} & Pointer to an interger. \\
+\hline
+\end{DoxyParams}
