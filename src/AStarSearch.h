@@ -8,7 +8,6 @@
 #ifndef HELPER_H
 
 #include <stdio.h>
-#include <stdlib.h>
 
 /*!
  *  @typedef State
@@ -89,7 +88,7 @@ extern void moveLEFT(int puzzleState[][3]);
  *  @param a Pointer to an integer.
  *  @param b Pointer to an interger.
  */
-extern void swap(int* a, int* b)
+extern void swap(int* a, int* b);
 /**
  *
 extern QueueNode* newQueueNode(int d,int p);
