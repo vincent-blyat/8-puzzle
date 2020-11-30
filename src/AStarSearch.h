@@ -38,7 +38,23 @@ typedef struct treeNode {
 
 } TreeNode;
 
-extern struct queueNode QueueNode;
+/*!
+ *  @typedef PriorityQueueNode
+ *  Alias for pQueueNode;
+ *
+ *  @struct pQueueNode
+ *  struct definition for qQueueNode
+ */
+typedef struct pQueueNode {
+    
+    TreeNode* node; //< tree node
+
+    int priority; //< priority status
+
+    pQueueNode* next; //< pointer to next node
+
+} PriorityQueueNode;
+
 
 #endif
 
@@ -89,8 +105,25 @@ extern void moveLEFT(int puzzleState[][3]);
  *  @param b Pointer to an interger.
  */
 extern void swap(int* a, int* b);
+
 /**
- *
+ *  @fn PriorityQueueNode* newPriorityQueueNode(TreeNode* node, int priority)
+ *  @brief Create a new node
+ *  @param n Pointer to a tree node.
+ *  @param p Priority status of the node.
+ */
+extern PriorityQueueNode* newPriorityQueueNode(TreeNode* n, int p);
+
+extern int pQPeek(PriorityQueueNode* head);
+
+extern void pQPop(PriorityQueueNode* head);
+
+extern void pQPush(PriorityQueueNode** head, TreeNode* n, int p);
+
+extern int pQisEmpty(PriorityQueueNode** head);
+
+
+/**
 extern QueueNode* newQueueNode(int d,int p);
 
 extern int qPeek(QueueNode** head);

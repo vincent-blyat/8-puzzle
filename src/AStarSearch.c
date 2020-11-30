@@ -7,10 +7,8 @@
 
 /*!
  *  @page TODO_LIST TODO list
- *  @todo Implement the operations
  *  @todo Implement the priority queue
  *  @todo Implement the list
- *  @todo Implement the tree
  *  @todo Test the functions.
  */
 
@@ -105,3 +103,11 @@ void swap(int* a, int* b) {
     *b = temp;
 }
 
+PriorityQueueNode* newPriorityQueueNode(TreeNode* n, int p) {
+    
+    PriorityQueueNode* temp = (PriorityQueueNode*)malloc(sizeof(PriorityQueueNode));
+    temp->node = n;
+    temp->priority = p;
+
+    return temp;
+}
