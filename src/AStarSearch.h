@@ -121,16 +121,3 @@ extern void pQPop(PriorityQueueNode* head);
 extern void pQPush(PriorityQueueNode** head, TreeNode* n, int p);
 
 extern int pQisEmpty(PriorityQueueNode** head);
-
-
-/**
-extern QueueNode* newQueueNode(int d,int p);
-
-extern int qPeek(QueueNode** head);
-
-extern void qPop(QueueNode** head);
-
-extern void qPush(QueueNode** head, int d, int p);
-
-extern int isQueueEmpty(QueueNode** head);
-**/

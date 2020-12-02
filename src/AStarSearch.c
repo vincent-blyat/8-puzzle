@@ -111,3 +111,44 @@ PriorityQueueNode* newPriorityQueueNode(TreeNode* n, int p) {
 
     return temp;
 }
+
+TreeNode* pQPeek(PriorityQueueNode* head) {
+    
+    return (*head)->n;
+}
+
+void pQPop(PriorityQueueNode* head) {
+    
+    PriorityQueueNode* head = temp;
+    (*head) = (*head)->next;
+
+    free(temp);
+}
+
+void pQPush(PriorityQueueNode** head, TreeNode* n, int p) {
+    
+    PriorityQueueNode* start = *(head);
+
+    PriorityQueueNode* temp = newPriorityQueueNode(n, p);
+
+    if(*(head)->priority > p) {
+        
+        temp->next = *head;
+        *(head) = temp;
+    } 
+    else {
+        while(start->next != NULL start->next->priority < p) {
+            
+            start = start->next;
+
+        }
+
+        temp->next = start->next;
+        start->next = temp;
+    }
+}
+
+int pQisEmpty(PriorityQueueNode** head) {
+
+    return (*head) == NULL;
+}
