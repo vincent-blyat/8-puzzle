@@ -51,10 +51,17 @@ typedef struct pQueueNode {
 
     int priority; //< priority status
 
-    pQueueNode* next; //< pointer to next node
+    struct pQueueNode* next; //< pointer to next node
 
 } PriorityQueueNode;
 
+typedef struct listNode {
+
+    TreeNode* node;
+
+    struct listNode* next;
+
+} ListNode; 
 
 #endif
 
@@ -66,9 +73,10 @@ typedef struct pQueueNode {
  *  @fn TreeNode* newTreeNode(int puzzleState[][3])A
  *  @brief Create a new node for the tree.
  *  @param puzzleState 2D for the new node.
+ *  @param c Cost for the state.
  *  @return A new node.
  */
-extern TreeNode* newTreeNode(int newpuzzleState[][3]);
+extern TreeNode* newTreeNode(int newpuzzleState[][3], int c);
 
 /**
  *  @fn void moveUP(int puzzleState[][3])
@@ -114,10 +122,16 @@ extern void swap(int* a, int* b);
  */
 extern PriorityQueueNode* newPriorityQueueNode(TreeNode* n, int p);
 
-extern int pQPeek(PriorityQueueNode* head);
+extern TreeNode* pQPeek(PriorityQueueNode* head);
 
-extern void pQPop(PriorityQueueNode* head);
+extern void pQPop(PriorityQueueNode **head);
 
 extern void pQPush(PriorityQueueNode** head, TreeNode* n, int p);
 
 extern int pQisEmpty(PriorityQueueNode** head);
+
+extern ListNode* newListNode(TreeNode* n);
+
+extern void listInsertTail(ListNode** head, TreeNode* n);
+
+extern void listDeleteHead(ListNode** head);
