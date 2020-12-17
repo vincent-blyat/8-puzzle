@@ -201,3 +201,80 @@ void listDeleteHead(ListNode **head) {
 
     free(temp);
 }
+
+int h(int state[][3], int option) {
+    
+    int goal_state[3][3] = {{1, 2, 3},
+                            {8, 0, 4},
+                            {7, 6, 5}};
+    int h_cost = 0;
+
+    switch(option) {
+        case 1: {
+                    for(int i = 0; i < 3; i++) {
+                        for(int j = 0; j < 3; j++) { 
+                            if(state[i][j] != goal_state[i][j]) {
+                                h_cost += 1;
+                            }
+                            printf("%d \n", h_cost);
+                        }
+                    }
+
+                    return h_cost;
+                    break;
+                }
+        case 2: {
+                    for(int i = 0; i < 3; i++) {
+                        for(int j = 0; j < 3; j++) {
+                            switch(state[i][j]) {
+                                case 0: {
+                                            h_cost += (abs(i - 1) + abs(j - 1));
+                                            break;
+                                        }
+
+                                case 1: {
+                                            h_cost += (abs(i - 0) + abs(j - 0));
+                                            break;
+                                        }
+
+                                case 2: {
+                                            h_cost += (abs(i - 0) + abs(j - 1));
+                                            break;
+                                        }
+                                            
+                                case 3: { 
+                                            h_cost += (abs(i - 0) + abs(j - 2));
+                                            break;
+                                        }
+
+                                case 4: {
+                                            h_cost += (abs(i - 1) + abs(j - 2));
+                                            break;
+                                        }
+
+                                case 5: {
+                                            h_cost += (abs(i - 2) + abs(j - 2));
+                                            break;
+                                        }
+
+                                case 6: {
+                                            h_cost += (abs(i - 2) + abs(j - 1));
+                                            break;
+                                        }
+
+                                case 7: {
+                                            h_cost += (abs(i - 2) + abs(j - 0));
+                                            break;
+                                            }
+
+                                case 8: {
+                                            h_cost += (abs(i - 1) + abs(j - 0));
+                                            break;
+                                        }
+                            }
+                        }
+                    }
+                return h_cost;
+                }
+    }
+}

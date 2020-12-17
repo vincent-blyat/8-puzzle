@@ -9,6 +9,8 @@
 
 #include <stdio.h>
 
+extern const int goal_state[3][3];
+
 /*!
  *  @typedef State
  *  Alias for state
@@ -135,3 +137,9 @@ extern ListNode* newListNode(TreeNode* n);
 extern void listInsertTail(ListNode** head, TreeNode* n);
 
 extern void listDeleteHead(ListNode** head);
+
+extern int g();
+
+extern int h(int state[][3], int option);
+
+extern int f();
