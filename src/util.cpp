@@ -1,9 +1,18 @@
+/**
+ *  @file util.cpp
+ *  @author Al Vincent Musa
+ *  
+ */
+
+
 #include <iostream>
 #include <fstream>
 #include <getopt.h>
 #include <sstream>
+#include <string>
 
 #include "util.h"
+#include "Tree.h"
 
 using namespace std;
 
@@ -49,7 +58,7 @@ void process_arg_vector(int arg_count, char* arg_vector[]) {
             case 'f': 
                     {
                         read_file(optarg);
-                    }
+                    }
 
             case '?':
             case ':':
@@ -61,6 +70,7 @@ void process_arg_vector(int arg_count, char* arg_vector[]) {
     return;
 }
 
+// Reads the contents of the input file
 void read_file(char* file_path) {
     
     string file_content;
@@ -76,8 +86,10 @@ void read_file(char* file_path) {
     return;
 }
 
+// Reads the argument from -i argument
 void read_input(char* input) {
-    
+
+    // splits the input and turns it into an array of 9
     string input_nums[9];
     int i = 0;
     stringstream ssin(input);
@@ -87,9 +99,31 @@ void read_input(char* input) {
         ssin >> input_nums[i];
         i++;
     }
+    
+    // transform the array into a matrix
+    i = 0;
+    for(int j = 0; j < 3; j++) {
+        for(int k = 0; k < 3; k++) {
+            
+            problem_state[j][k] = stoi(input_nums[i]);
+            i++;
+        }
+    }
+}
 
-    for(i = 0; i < 9; i++) {
-        
-        cout << input_nums[i] << " " << endl;
+// Solves the  puzzle problem
+void solve(int problem_state[][3]) {
+   
+    Tree_Node search_tree;
+
+    search_tree.state.setPuzzleState(problem_state);
+
+    cout << "Key: " << search_tree.state.getKey() << endl;
+    cout << "Cost: " << search_tree.state.getCost() << endl;
+    for(int i = 0; i < 3; i++) {
+        for(int j = 0; j < 3; j++) {
+            cout << search_tree.state.puzzle_state[i][j] << " ";
+        }
+        cout << endl;
     }
 }
